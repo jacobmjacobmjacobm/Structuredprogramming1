@@ -1,0 +1,49 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> def add(N):
+	return n+nn+nnn
+
+>>> add(1)
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    add(1)
+  File "<pyshell#2>", line 2, in add
+    return n+nn+nnn
+NameError: global name 'n' is not defined
+>>> def add(n):
+	return n+nn+nnn
+
+>>> add(1)
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    add(1)
+  File "<pyshell#6>", line 2, in add
+    return n+nn+nnn
+NameError: global name 'nn' is not defined
+>>> def add(n):
+	return (n+(n*n)+(n*n*n)
+
+
+
+
+
+print n
+		
+SyntaxError: invalid syntax
+>>> add(1)
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    add(1)
+  File "<pyshell#6>", line 2, in add
+    return n+nn+nnn
+NameError: global name 'nn' is not defined
+>>> def add (n):
+	return n+n*n+n*n*n
+
+>>> add (2)
+14
+>>> add(3)
+39
+>>> add(9)
+819
+>>> 

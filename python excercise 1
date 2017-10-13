@@ -1,0 +1,36 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> >>> def star():
+...     return "twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high,\n \t \t Like a diamond in the sky. \n twinkle,twinkle,little,star, \n How I wonder what you are"
+SyntaxError: invalid syntax
+>>> def star():
+	return "twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high,\n \t \t Like a diamond in the sky. \n twinkle,twinkle,little,star, \n How I wonder what you are"
+
+>>> star()
+'twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high,\n \t \t Like a diamond in the sky. \n twinkle,twinkle,little,star, \n How I wonder what you are'
+>>> def star():
+	return "twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high,\n \t \t Like a diamond in the sky. \n twinkle,twinkle,little,star, \n How I wonder what you are"
+star()
+SyntaxError: invalid syntax
+>>> star()
+'twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high,\n \t \t Like a diamond in the sky. \n twinkle,twinkle,little,star, \n How I wonder what you are'
+>>> print("twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high,\n \t \t Like a diamond in the sky. \n twinkle,twinkle,little,star, \n How I wonder what you are")
+twinkle, twinkle, little star, 
+ 	 How I wonder what you are! 
+ 	 	 Up above the world so high,
+ 	 	 Like a diamond in the sky. 
+ twinkle,twinkle,little,star, 
+ How I wonder what you are
+>>> def star():
+	return "twinkle, twinkle, little star, \n \t How I wonder what you are! \n \t \t Up above the world so high,\n \t \t Like a diamond in the sky. \n twinkle,twinkle,little,star, \n How I wonder what you are"
+
+>>> print(star)
+<function star at 0x02E76C00>
+>>> print(star())
+twinkle, twinkle, little star, 
+ 	 How I wonder what you are! 
+ 	 	 Up above the world so high,
+ 	 	 Like a diamond in the sky. 
+ twinkle,twinkle,little,star, 
+ How I wonder what you are
+>>> 

@@ -1,0 +1,38 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> exam_st_date=(11,12,2014)
+>>> def examstart():
+	return "the examination will start from:" + exam_st_date
+
+>>> examstart()
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    examstart()
+  File "<pyshell#3>", line 2, in examstart
+    return "the examination will start from:" + exam_st_date
+TypeError: Can't convert 'tuple' object to str implicitly
+>>> def examstart():
+	print ("the examination will start from:" + exam_st_date)
+
+	
+>>> examstart()
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    examstart()
+  File "<pyshell#6>", line 2, in examstart
+    print ("the examination will start from:" + exam_st_date)
+TypeError: Can't convert 'tuple' object to str implicitly
+>>> exam_st_date= ("11,12,2014")
+>>> def examstart():
+	print ("the examination will start from:" + exam_st_date)
+
+	
+>>> examstart()
+the examination will start from:11,12,2014
+>>> def examstart():
+	print ("The examination will start from:" + exam_st_date)
+
+	
+>>> examstart()
+The examination will start from:11,12,2014
+>>> 
