@@ -1,0 +1,40 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>>  sample_list=[1,2,3,4]
+ 
+SyntaxError: unexpected indent
+>>> sample_list=[1,2,3,4]
+>>> tuplelist=tuple(sample_list)
+>>> print(sample_list)
+[1, 2, 3, 4]
+>>> print(tuplelist)
+(1, 2, 3, 4)
+>>> def listandtuple
+SyntaxError: invalid syntax
+>>> def listandtuple():
+	return tuplelist + sample_list
+
+>>> listandtuple():
+	
+SyntaxError: invalid syntax
+>>> listandtuple()
+Traceback (most recent call last):
+  File "<pyshell#10>", line 1, in <module>
+    listandtuple()
+  File "<pyshell#8>", line 2, in listandtuple
+    return tuplelist + sample_list
+TypeError: can only concatenate tuple (not "list") to tuple
+>>> def listandtuple():
+	print(sample_list)
+	print(tuplelist)
+
+	
+>>> listandtuple()
+[1, 2, 3, 4]
+(1, 2, 3, 4)
+>>> retunr
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    retunr
+NameError: name 'retunr' is not defined
+>>> 
