@@ -1,0 +1,2701 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>>  #!/usr/bin/env python3
+>>> from random import*
+>>> player_score = 0
+>>> computer_score = 0
+>>> 
+>>> def hangedman(hangman):
+	graphic = [
+		"""
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      /
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / \
+			|
+		     ==============
+		     """,]
+
+	
+>>> def start():
+	print("Let's play a game of Hangman."
+	while game():
+	      
+SyntaxError: invalid syntax
+>>> def start():
+	print("Let's play a game of Hangman.")
+	while game():
+		pass
+	scores()
+
+	
+>>> def game()
+SyntaxError: invalid syntax
+>>> def game():
+	dictionary =["gnu","kernel","mageia","penguin","ubuntu"]
+	word= choice(dictionary)
+	word_length=len(word)
+	clue = word_length * ["_"]
+	tries=6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+		while (letters_wrong != tries) and ("".join(clue) != word):
+			
+SyntaxError: unexpected indent
+>>> def game():
+	dictionary =["gnu","kernel","mageia","penguin","ubuntu"]
+	word= choice(dictionary)
+	word_length=len(word)
+	clue = word_length * ["_"]
+	tries=6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter = guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) !=-1:
+				print ("You've already picked",letter)
+			else:
+				letters_tried = letters_tried = letter
+				first_index = word.find(letter)
+				if first_index == -1:
+					letters_wrong +=1
+					print ("Sorry,",letter,"isn't what we're looking for.")
+				else:
+					print("Congratulations,"letter,"is correct.")
+					
+SyntaxError: invalid syntax
+>>> for i in range (word_length):
+	if letter == word[i]:
+		clue[i] = letter
+
+		
+Traceback (most recent call last):
+  File "<pyshell#43>", line 1, in <module>
+    for i in range (word_length):
+NameError: name 'word_length' is not defined
+>>> def game():
+	dictionary =["gnu","kernel","mageia","penguin","ubuntu"]
+	word= choice(dictionary)
+	word_length=len(word)
+	clue = word_length * ["_"]
+	tries=6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter = guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) !=-1:
+				print ("You've already picked",letter)
+			else:
+				letters_tried = letters_tried = letter
+				first_index = word.find(letter)
+				if first_index == -1:
+					letters_wrong +=1
+					print ("Sorry,",letter,"isn't what we're looking for.")
+				else:
+					print("Congratulations,",letter,"is correct.")
+
+					
+>>> def game():
+	dictionary =["gnu","kernel","mageia","penguin","ubuntu"]
+	word= choice(dictionary)
+	word_length=len(word)
+	clue = word_length * ["_"]
+	tries=6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter = guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) !=-1:
+				print ("You've already picked",letter)
+			else:
+				letters_tried = letters_tried = letter
+				first_index = word.find(letter)
+				if first_index == -1:
+					letters_wrong +=1
+					print ("Sorry,",letter,"isn't what we're looking for.")
+				else:
+					print("Congratulations,",letter,"is correct.")
+					for i in range (word_length):
+						if letter == word[i]:
+							clue[i] = letter
+						else:
+							print("Choose another.")
+						hangedman(letters_wrong)
+						print(" ".join(clue))
+						print("guesses:", letters_tried)
+						if letters_wrong == tries:
+							print("game Over.")
+							print("The word was", word)
+							computer_score += 1
+							break
+						if "".join(clue) == word:
+							print("You Win!")
+							print("The word was",word)
+							player_score += 1
+							break
+						return play_again()
+
+					
+>>> Def guess_letter():
+	
+SyntaxError: invalid syntax
+>>> def guess_letter():
+	print
+	letter = raw_input("take a guess at our mystery word:")
+	letter.strip()
+	letter.lower()
+	print
+	return letter
+
+>>> def play_again():
+	answer = input("Would you like to keep playing? y/n:")
+	if answer in ("y","Y","Yes","yes","Of course!"):
+		return answer
+	else:
+		print ("Thank you for playing our game. See you next time!")
+
+		
+>>> def scores():
+	global player_score, computer_score
+	print("HIGH SCORES")
+	print("player:", player_score)
+	print("computer:", compyter_score)
+
+	
+>>> if __name__ == '__main__':
+	start()
+
+	
+Let's play a game of Hangman.
+Traceback (most recent call last):
+  File "<pyshell#89>", line 2, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#64>", line 13, in game
+    letter = guess_letter()
+  File "<pyshell#73>", line 3, in guess_letter
+    letter = raw_input("take a guess at our mystery word:")
+NameError: global name 'raw_input' is not defined
+>>> start()
+Let's play a game of Hangman.
+Traceback (most recent call last):
+  File "<pyshell#90>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#64>", line 13, in game
+    letter = guess_letter()
+  File "<pyshell#73>", line 3, in guess_letter
+    letter = raw_input("take a guess at our mystery word:")
+NameError: global name 'raw_input' is not defined
+>>> def guess_letter():
+	print
+	letter = input("take a guess at our mystery word:")
+	letter.strip()
+	letter.lower()
+	print
+	return letter
+
+>>> def game():
+	dictionary =["gnu","kernel","mageia","penguin","ubuntu"]
+	word= choice(dictionary)
+	word_length=len(word)
+	clue = word_length * ["_"]
+	tries=6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter = guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) !=-1:
+				print ("You've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index = word.find(letter)
+				if first_index == -1:
+					letters_wrong +=1
+					print ("Sorry,",letter,"isn't what we're looking for.")
+				else:
+					print("Congratulations,",letter,"is correct.")
+					for i in range (word_length):
+						if letter == word[i]:
+							clue[i] = letter
+		else:
+			print("Choose another.")
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses:", letters_tried)
+		if letters_wrong == tries:
+			print("game Over.")
+			print("The word was", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print("You Win!")
+			print("The word was",word)
+			player_score += 1
+			break
+	return play_again()
+take a guess at our mystery word:a
+Sorry, a isn't what we're looking for.
+take a guess at our mystery word:b
+Sorry, b isn't what we're looking for.
+take a guess at our mystery word:n
+Congratulations, n is correct.
+Choose another.
+_ _ _ _ _ _
+guesses: n
+Would you like to keep playing? y/n:a
+Thank you for playing our game. See you next time!
+HIGH SCORES
+player: 0
+Traceback (most recent call last):
+  File "<pyshell#93>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 5, in start
+    scores()
+  File "<pyshell#86>", line 5, in scores
+    print("computer:", compyter_score)
+NameError: global name 'compyter_score' is not defined
+>>> b
+Traceback (most recent call last):
+  File "<pyshell#94>", line 1, in <module>
+    b
+NameError: name 'b' is not defined
+>>> f
+Traceback (most recent call last):
+  File "<pyshell#95>", line 1, in <module>
+    f
+NameError: name 'f' is not defined
+>>> Y
+Traceback (most recent call last):
+  File "<pyshell#96>", line 1, in <module>
+    Y
+NameError: name 'Y' is not defined
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:ubuntu
+take a guess at our mystery word:a
+Sorry, a isn't what we're looking for.
+take a guess at our mystery word:b
+Sorry, b isn't what we're looking for.
+take a guess at our mystery word:c
+Sorry, c isn't what we're looking for.
+take a guess at our mystery word:d
+Sorry, d isn't what we're looking for.
+take a guess at our mystery word:e
+Sorry, e isn't what we're looking for.
+take a guess at our mystery word:f
+Sorry, f isn't what we're looking for.
+HIGH SCORES
+player: 0
+Traceback (most recent call last):
+  File "<pyshell#97>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 5, in start
+    scores()
+  File "<pyshell#86>", line 5, in scores
+    print("computer:", compyter_score)
+NameError: global name 'compyter_score' is not defined
+>>> def scores():
+	global player_score, computer_score
+	print("HIGH SCORES")
+	print("player:", player_score)
+	print("computer:", computer_score)
+
+	
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+Sorry, a isn't what we're looking for.
+take a guess at our mystery word:b
+Sorry, b isn't what we're looking for.
+take a guess at our mystery word:c
+Sorry, c isn't what we're looking for.
+take a guess at our mystery word:d
+Sorry, d isn't what we're looking for.
+take a guess at our mystery word:e
+Congratulations, e is correct.
+Choose another.
+_ _ _ _ _ _
+guesses: e
+Would you like to keep playing? y/n:f
+Thank you for playing our game. See you next time!
+HIGH SCORES
+player: 0
+computer: 0
+>>> def hangedman(hangman):
+	graphic = [
+		"""
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      /
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / \
+			|
+		     ==============
+		     """,]
+		print(graphic[hangman])
+		
+SyntaxError: unexpected indent
+>>> def hangedman(hangman):
+	graphic = [
+		"""
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      /
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / \
+			|
+		     ==============
+		     """,]
+	print(graphic[hangman])
+
+	
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+Sorry, a isn't what we're looking for.
+take a guess at our mystery word:b
+Sorry, b isn't what we're looking for.
+take a guess at our mystery word:c
+Sorry, c isn't what we're looking for.
+take a guess at our mystery word:d
+Sorry, d isn't what we're looking for.
+take a guess at our mystery word:e
+Congratulations, e is correct.
+Choose another.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _ _
+guesses: e
+Would you like to keep playing? y/n:f
+Thank you for playing our game. See you next time!
+HIGH SCORES
+player: 0
+computer: 0
+>>> def game():
+	dictionary = ["hello","kernel","friend","pumpkin","penguin","crazy"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+	return play_again()
+
+	
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _
+guesses:  a
+take a guess at our mystery word:b
+sorry b isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _
+guesses:  ab
+take a guess at our mystery word:c
+sorry c isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _
+guesses:  abc
+take a guess at our mystery word:d
+sorry d isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _
+guesses:  abcd
+take a guess at our mystery word:e
+congratulations, e  is correct
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ e _ _ e _
+guesses:  abcde
+take a guess at our mystery word:f
+sorry f isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      /
+			|
+		     ==============
+		     
+_ e _ _ e _
+guesses:  abcdef
+take a guess at our mystery word:g
+sorry g isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		     
+_ e _ _ e _
+guesses:  abcdefg
+Game Over
+The word was:  kernel
+Would you like to keep playing? y/n:h
+Thank you for playing our game. See you next time!
+HIGH SCORES
+player: 0
+computer: 1
+>>> 
+>>> def hangedman(hangman):
+	graphic = [
+		"""
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / \
+			|
+		     ==============
+		 
+		     """,]
+	print(graphic[hangman])
+
+	
+
+	
+>>> start()
+SyntaxError: invalid syntax
+>>> 
+>>> def hangedman(hangman):
+	graphic = [
+		"""
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / \
+			|
+		     ==============
+		 
+		     """,]
+	print(graphic[hangman])
+
+	
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:ubunyu
+choose another letter
+
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _
+guesses:  
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _
+guesses:  a
+take a guess at our mystery word:b
+sorry b isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _
+guesses:  ab
+take a guess at our mystery word:d
+congratulations, d  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ d
+guesses:  abd
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ d
+guesses:  abd
+take a guess at our mystery word:d
+you've already picked d
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ d
+guesses:  abd
+take a guess at our mystery word:f
+congratulations, f  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+f _ _ _ _ d
+guesses:  abdf
+take a guess at our mystery word:friend
+choose another letter
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+f _ _ _ _ d
+guesses:  abdf
+take a guess at our mystery word:r
+congratulations, r  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+f r _ _ _ d
+guesses:  abdfr
+take a guess at our mystery word:i
+congratulations, i  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+f r i _ _ d
+guesses:  abdfri
+take a guess at our mystery word:e
+congratulations, e  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+f r i e _ d
+guesses:  abdfrie
+take a guess at our mystery word:n
+congratulations, n  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+f r i e n d
+guesses:  abdfrien
+You Win :D
+the word was friend
+Would you like to keep playing? y/n:d
+Thank you for playing our game. See you next time!
+HIGH SCORES
+player: 1
+computer: 1
+>>> def game():
+	dictionary = ["Goodbye","bannana","dog","penguin","pengu","fireworks"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+	return play_again()
+
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:g
+sorry g isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _ _
+guesses:  g
+take a guess at our mystery word:b
+congratulations, b  is correct
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ b _ _
+guesses:  gb
+take a guess at our mystery word:u
+sorry u isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ b _ _
+guesses:  gbu
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ b _ _
+guesses:  gbua
+take a guess at our mystery word:g
+you've already picked g
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ b _ _
+guesses:  gbua
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ b _ _
+guesses:  gbua
+take a guess at our mystery word:d
+congratulations, d  is correct
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ d b _ _
+guesses:  gbuad
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ d b _ _
+guesses:  gbuad
+take a guess at our mystery word:n
+sorry n isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _ d b _ _
+guesses:  gbuadn
+take a guess at our mystery word:t
+sorry t isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:
+choose another letter
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+u_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:
+choose another letter
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+utake a guess at our mystery word:
+choose another letter
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+uguesses:  gbuadnt
+take a guess at our mystery word:
+choose another letter
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:u
+you've already picked u
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:sad
+choose another letter
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:b
+you've already picked b
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ d b _ _
+guesses:  gbuadnt
+take a guess at our mystery word:c
+sorry c isn't what we we're looking for.
+Traceback (most recent call last):
+  File "<pyshell#123>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#122>", line 31, in game
+    hangedman(letters_wrong)
+  File "<pyshell#119>", line 58, in hangedman
+    print(graphic[hangman])
+IndexError: list index out of range
+>>> def game():
+	dictionary = ["Good","ban","dog","penguin","pengu","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+	return play_again()
+
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:s
+sorry s isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  s
+take a guess at our mystery word:g
+sorry g isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  sg
+take a guess at our mystery word:
+choose another letter
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  sg
+take a guess at our mystery word:b
+congratulations, b  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b _ _
+guesses:  sgb
+take a guess at our mystery word:a
+congratulations, a  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b a _
+guesses:  sgba
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b a _
+guesses:  sgba
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b a _
+guesses:  sgba
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b a _
+guesses:  sgba
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b a _
+guesses:  sgba
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b a _
+guesses:  sgba
+take a guess at our mystery word:n
+congratulations, n  is correct
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+b a n
+guesses:  sgban
+You Win :D
+the word was ban
+Would you like to keep playing? y/n:y
+take a guess at our mystery word:n
+congratulations, n  is correct
+
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     
+_ _ n
+guesses:  n
+take a guess at our mystery word:a
+congratulations, a  is correct
+
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     
+_ a n
+guesses:  na
+take a guess at our mystery word:b
+congratulations, b  is correct
+
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     
+b a n
+guesses:  nab
+You Win :D
+the word was ban
+Would you like to keep playing? y/n:y
+take a guess at our mystery word:b
+sorry b isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  b
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  ba
+take a guess at our mystery word:n
+sorry n isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  ban
+take a guess at our mystery word:w
+sorry w isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  banw
+take a guess at our mystery word:w
+you've already picked w
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  banw
+take a guess at our mystery word:w
+you've already picked w
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  banw
+take a guess at our mystery word:a
+you've already picked a
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _
+guesses:  banw
+take a guess at our mystery word:v
+sorry v isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _
+guesses:  banwv
+take a guess at our mystery word:k
+sorry k isn't what we we're looking for.
+Traceback (most recent call last):
+  File "<pyshell#126>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#125>", line 31, in game
+    hangedman(letters_wrong)
+  File "<pyshell#119>", line 58, in hangedman
+    print(graphic[hangman])
+IndexError: list index out of range
+>>> uter: 0
+>>> def game():
+	dictionary = ["pengu","Begin","house","watermelon","penguin","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+	return play_again()
+SyntaxError: invalid syntax
+>>> def game():
+	dictionary = ["pengu","Begin","house","watermelon","penguin","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+	return play_again()
+
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  a
+take a guess at our mystery word:b
+sorry b isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  ab
+take a guess at our mystery word:c
+sorry c isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  abc
+take a guess at our mystery word:d
+sorry d isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  abcd
+take a guess at our mystery word:e
+congratulations, e  is correct
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _ _ e
+guesses:  abcde
+take a guess at our mystery word:g
+sorry g isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ _ e
+guesses:  abcdeg
+take a guess at our mystery word:g
+you've already picked g
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ _ _ e
+guesses:  abcdeg
+take a guess at our mystery word:f
+sorry f isn't what we we're looking for.
+Traceback (most recent call last):
+  File "<pyshell#130>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#129>", line 31, in game
+    hangedman(letters_wrong)
+  File "<pyshell#119>", line 58, in hangedman
+    print(graphic[hangman])
+IndexError: list index out of range
+>>> def hangedman(hangman):
+	graphic = [
+		"""
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / \
+			|
+		     ==============
+		 
+		     """,]
+	print(graphic[hangman])
+
+	
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+congratulations, a  is correct
+
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     
+_ _ a _
+guesses:  a
+take a guess at our mystery word:b
+sorry b isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ a _
+guesses:  ab
+take a guess at our mystery word:c
+sorry c isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ a _
+guesses:  abc
+take a guess at our mystery word:e
+sorry e isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ a _
+guesses:  abce
+take a guess at our mystery word:d
+sorry d isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ a _
+guesses:  abced
+take a guess at our mystery word:f
+sorry f isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      / 			|
+		     ==============
+		 
+		     
+_ _ a _
+guesses:  abcedf
+take a guess at our mystery word:g
+sorry g isn't what we we're looking for.
+Traceback (most recent call last):
+  File "<pyshell#133>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#129>", line 31, in game
+    hangedman(letters_wrong)
+  File "<pyshell#132>", line 58, in hangedman
+    print(graphic[hangman])
+IndexError: list index out of range
+>>> def hangedman(hangman):
+	graphic = [
+		"""
+			+-------+
+			|
+			|
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     """,
+		"""
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      | |
+			|
+		     ==============
+		 
+		     """,]
+	print(graphic[hangman])
+	return
+
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  a
+take a guess at our mystery word:b
+sorry b isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  ab
+take a guess at our mystery word:c
+sorry c isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  abc
+take a guess at our mystery word:d
+sorry d isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  abcd
+take a guess at our mystery word:e
+congratulations, e  is correct
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ e _ _ _
+guesses:  abcde
+take a guess at our mystery word:f
+sorry f isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      | |
+			|
+		     ==============
+		 
+		     
+_ e _ _ _
+guesses:  abcdef
+take a guess at our mystery word:g
+congratulations, g  is correct
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      | |
+			|
+		     ==============
+		 
+		     
+_ e _ g _
+guesses:  abcdefg
+take a guess at our mystery word:g
+you've already picked g
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      | |
+			|
+		     ==============
+		 
+		     
+_ e _ g _
+guesses:  abcdefg
+take a guess at our mystery word:h
+sorry h isn't what we we're looking for.
+Traceback (most recent call last):
+  File "<pyshell#138>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#129>", line 31, in game
+    hangedman(letters_wrong)
+  File "<pyshell#137>", line 58, in hangedman
+    print(graphic[hangman])
+IndexError: list index out of range
+>>> def play_again():
+	answer = input("Would you like to play again? y/n: ")
+	if answer in ("y","Y","yes","Yes","Of course!"):
+		return answer
+	else:
+		print ("Thank you for playing our game! See you next time!")
+
+		
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  a
+take a guess at our mystery word:b
+sorry b isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|       |
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  ab
+take a guess at our mystery word:c
+sorry c isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  abc
+take a guess at our mystery word:d
+sorry d isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  abcd
+take a guess at our mystery word:e
+congratulations, e  is correct
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|
+			|
+		     ==============
+		     
+_ e _ _ _
+guesses:  abcde
+take a guess at our mystery word:f
+sorry f isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      | |
+			|
+		     ==============
+		 
+		     
+_ e _ _ _
+guesses:  abcdef
+take a guess at our mystery word:g
+congratulations, g  is correct
+
+			+-------+
+			|       |
+			|       0
+			|      -|-
+			|      | |
+			|
+		     ==============
+		 
+		     
+_ e _ g _
+guesses:  abcdefg
+take a guess at our mystery word:h
+sorry h isn't what we we're looking for.
+Traceback (most recent call last):
+  File "<pyshell#142>", line 1, in <module>
+    start()
+  File "<pyshell#13>", line 3, in start
+    while game():
+  File "<pyshell#129>", line 31, in game
+    hangedman(letters_wrong)
+  File "<pyshell#137>", line 58, in hangedman
+    print(graphic[hangman])
+IndexError: list index out of range
+>>> def game():
+	dictionary = ["pengu","Begin","house","watermelon","penguin","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+		if guesses == 0
+	return play_again()
+SyntaxError: invalid syntax
+>>> def game():
+	dictionary = ["pengu","Begin","house","watermelon","penguin","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+		if guesses == 0:
+	return play_again()
+SyntaxError: expected an indented block
+>>> def game():
+	dictionary = ["pengu","Begin","house","watermelon","penguin","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+		if guesses == 0:
+		return play_again()
+	
+SyntaxError: expected an indented block
+>>> def game():
+	dictionary = ["pengu","Begin","house","watermelon","penguin","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+		if guesses == 0:
+			return play_again()
+
+		
+>>> start():
+	
+SyntaxError: invalid syntax
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _ _ _
+guesses:  a
+Would you like to play again? y/n: b
+Thank you for playing our game! See you next time!
+HIGH SCORES
+player: 3
+computer: 1
+>>> c
+Traceback (most recent call last):
+  File "<pyshell#150>", line 1, in <module>
+    c
+NameError: name 'c' is not defined
+>>> start()
+Let's play a game of Hangman.
+take a guess at our mystery word:a
+sorry a isn't what we we're looking for.
+
+			+-------+
+			|       |
+			|       0
+			|
+			|
+			|
+		     ==============
+		     
+_ _ _ _ _
+guesses:  a
+Would you like to play again? y/n: b
+Thank you for playing our game! See you next time!
+HIGH SCORES
+player: 3
+computer: 1
+>>> def game():
+	dictionary = ["pengu","Begin","house","watermelon","penguin","star"]
+	word = choice(dictionary)
+	word_length = len(word)
+	clue = word_length * ["_"]
+	tries = 6
+	letters_tried = ""
+	guesses = 0
+	letters_right = 0
+	letters_wrong = 0
+	global computer_score, player_score
+	while (letters_wrong != tries) and ("".join(clue) != word):
+		letter=guess_letter()
+		if len(letter)==1 and letter.isalpha():
+			if letters_tried.find(letter) != -1:
+				print ("you've already picked",letter)
+			else:
+				letters_tried = letters_tried + letter
+				first_index=word.find(letter)
+				if first_index == -1:
+					letters_wrong += 1
+					print ("sorry",letter,"isn't what we we're looking for.")
+				else:
+					print("congratulations,",letter," is correct")
+				for i in range(word_length):
+					if letter == word[i]:
+						clue[i] = letter
+		else:
+			print("choose another letter")
+			#this is taking soo long...
+		hangedman(letters_wrong)
+		print(" ".join(clue))
+		print("guesses: ", letters_tried)
+		if letters_wrong == tries:
+			print("Game Over")
+			print("The word was: ", word)
+			computer_score += 1
+			break
+		if "".join(clue) == word:
+			print ("You Win :D")
+			print ("the word was", word)
+			player_score += 1
+			break
+		if guesses == 6:
+			return play_again()
+
+		
+>>> 
