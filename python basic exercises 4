@@ -1,0 +1,51 @@
+Python 3.2.2 (default, Sep  4 2011, 09:51:08) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> def reverse (name):
+	return name [::-1]
+
+>>> reverse ("jacob Martin")
+'nitraM bocaj'
+>>> reverse("(Jacob)" "(Martin)")
+')nitraM()bocaJ('
+>>> reverse (Jacob, Martin)
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    reverse (Jacob, Martin)
+NameError: name 'Jacob' is not defined
+>>> reverse (nitram, bocaj)
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    reverse (nitram, bocaj)
+NameError: name 'nitram' is not defined
+>>> reverse ("nitram bocaJ
+	 
+SyntaxError: EOL while scanning string literal
+>>> reverse ("nitraM bocaJ")
+'Jacob Martin'
+>>> def reverse (Name 1, Name 2):
+	
+SyntaxError: invalid syntax
+>>> def reverse (name1, name2):
+	return name2 + name1
+
+>>> reverse(Jacob, Martin)
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    reverse(Jacob, Martin)
+NameError: name 'Jacob' is not defined
+>>> reverse("Jacob", "martin")
+'martinJacob'
+>>> def revserse (name1, name2):
+	return name2 + " " + name1
+
+>>> reverse("Jacob", "Martin")
+'MartinJacob'
+>>> >>> def revserse (name1, name2):
+	return name2 + "_" + name1
+SyntaxError: invalid syntax
+>>> def revserse (name1, name2):
+	return name2 + "_" + name1
+
+>>> reverse ("jacob", "martin")
+'martinjacob'
+>>> 
